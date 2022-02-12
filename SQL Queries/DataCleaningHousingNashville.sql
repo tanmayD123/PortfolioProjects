@@ -60,8 +60,7 @@ SET propertySplitCity = SUBSTRING(PropertyAddress, CHARINDEX(',', PropertyAddres
 
 ------------------------------------------------------------------------------------------------------------------------
 
--- Seperating OwnerAdress (not propertyAdress) using another method PARSENAME (because SUBSTRING IS BORING)
--- SUPER SIMPLE !
+-- Seperating OwnerAdress 
 
 SELECT PARSENAME(REPLACE(OwnerAddress, ',' , '.'), 3),
 	PARSENAME(REPLACE(OwnerAddress, ',' , '.'), 2),
